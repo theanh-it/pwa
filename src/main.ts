@@ -1,4 +1,6 @@
 import "@styles/common.scss";
+import "vue-virtual-flow/style.css";
+
 import { createApp } from "vue";
 import type { Component } from "vue";
 

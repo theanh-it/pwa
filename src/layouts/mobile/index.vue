@@ -26,7 +26,7 @@ const { isBottomBar } = useApp();
 .page {
   &-enter-active,
   &-leave-active {
-    transition: 1s;
+    transition: 0.2s;
   }
   &-enter-from {
     opacity: 0;

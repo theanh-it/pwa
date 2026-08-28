@@ -1,21 +1,63 @@
 <script lang="ts" setup>
+import { ref } from "vue";
+import {
+  WindowDynamicVirtualScroll,
+  type VirtualScrollExpose,
+} from "vue-virtual-flow";
+
 import Page from "@/components/mobile/page.vue";
 
 import { useAppRouter } from "@composables/router";
 
+import { createArticles } from "@/faker-data/articles";
+
 import { ROUTER_NAME } from "@constants/router-name";
 
 const { goToName } = useAppRouter();
+
+const items = ref<any[]>([]);
+
+items.value = createArticles(100);
 </script>
 
 <template>
   <Page hidden-header>
-    <h1>Home page</h1>
-    <button @click="goToName(ROUTER_NAME.child)">Child Page</button>
-    <p v-for="value in 100">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet,
-      fugit quasi hic natus facere placeat magnam possimus dignissimos nemo
-      earum ab vel impedit, consequatur odio recusandae itaque. Nam, quae!
-    </p>
+    <WindowDynamicVirtualScroll
+      ref="list"
+      :items="items"
+      :estimated-item-size="320"
+      :overscan="3"
+      item-key="id"
+    >
+      <template #default="{ item, index }">
+        <article>
+          <img :src="item.image" alt="" />
+          <div class="info">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.summary }}</p>
+          </div>
+        </article>
+      </template>
+    </WindowDynamicVirtualScroll>
   </Page>
 </template>
+
+<style lang="scss" scoped>
+article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  > .info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
