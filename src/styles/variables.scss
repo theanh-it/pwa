@@ -1,0 +1,103 @@
+@use "./colors" as *;
+
+// Colors
+$white: #fff;
+$black: material-color(grey, 900);
+$gray: material-color(grey, 50);
+$red: material-color(red, 500);
+$blue: material-color(blue, 500);
+$green: material-color(green, 500);
+$yellow: material-color(yellow, 500);
+$orange: material-color(orange, 500);
+$purple: material-color(purple, 500);
+$pink: material-color(pink, 500);
+$brown: material-color(brown, 500);
+$gray: material-color(grey, 50);
+
+$color-text: #1a1a1a;
+$color-text-muted: #6b7280;
+$color-bg: #ffffff;
+$color-bg-subtle: #f9fafb;
+$color-border: #e5e7eb;
+$color-primary: #2563eb;
+$color-primary-hover: #1d4ed8;
+$color-error: #dc2626;
+$color-success: #16a34a;
+$color-warning: #f59e0b;
+$color-warning-hover: #d97706;
+
+$active: material-color(blue, 800);
+$bg-modal: rgba(0, 0, 0, 0.65);
+$bg-page: $white;
+
+// z-index
+$z-index-window: 9999;
+$z-index-body: 9998;
+$z-index-app: 9997;
+
+// Time
+$time-fast: 0.2s;
+$time: 0.4s;
+$time-slow: 0.6s;
+
+// scale
+$scale: 0px;
+$scale-1: 2px;
+$scale-2: 4px;
+$scale-3: 6px;
+$scale-4: 8px;
+$scale-5: 10px;
+$scale-6: 12px;
+$scale-7: 14px;
+$scale-8: 16px;
+$scale-9: 18px;
+$scale-10: 20px;
+$scale-11: 22px;
+$scale-12: 24px;
+$scale-13: 26px;
+$scale-14: 28px;
+$scale-15: 30px;
+$scale-16: 32px;
+$scale-17: 34px;
+$scale-18: 36px;
+$scale-19: 38px;
+$scale-20: 40px;
+
+// radius
+$radius-xs: $scale-2;
+$radius-sm: $scale-4;
+$radius-md: $scale-5;
+$radius-lg: $scale-8;
+$radius-xl: $scale-10;
+$radius-full: 9999px;
+
+// space
+$space-xs: $scale-2;
+$space-sm: $scale-4;
+$space-md: $scale-5;
+$space-lg: $scale-8;
+$space-xl: $scale-10;
+$space-app: $scale-10;
+
+// font size
+$font-size-xs: $scale-5;
+$font-size-sm: $scale-6;
+$font-size-md: $scale-7;
+$font-size-lg: $scale-8;
+$font-size-xl: $scale-10;
+$font-size-2xl: $scale-12;
+$font-size-3xl: $scale-14;
+$font-size-4xl: $scale-16;
+
+// font weight
+$font-weight-light: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+// font family
+$font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+// border
+$border: 1px solid $color-border;
+$border-medium: 2px solid $color-border;
