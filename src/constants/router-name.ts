@@ -3,6 +3,7 @@ export const ROUTER_NAME = {
   child: "child",
   home: "home",
   messages: "messages",
+  messagesId: "messages-id",
   notifications: "notifications",
   profile: "profile",
 

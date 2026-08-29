@@ -12,6 +12,7 @@ import {
   faBell,
   faAddressCard,
   faNewspaper,
+  faEllipsisVertical,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -32,6 +33,7 @@ const icons = [
   faBell,
   faAddressCard,
   faNewspaper,
+  faEllipsisVertical,
 ];
 
 library.add(icons);

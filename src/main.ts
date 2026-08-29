@@ -5,6 +5,9 @@ import { createApp } from "vue";
 import type { Component } from "vue";
 
 import VWave from "v-wave";
+import Vue3TouchEvents, {
+  type Vue3TouchEventsOptions,
+} from "vue3-touch-events";
 
 import { pinia } from "@plugins/pinia";
 import { router } from "@plugins/vue-nnn-router";
@@ -21,6 +24,7 @@ app.use(VWave, {
   easing: "ease-in",
   duration: 0.3,
 });
+app.use(Vue3TouchEvents, {});
 
 app.component("fa-icon", FontAwesomeIcon as Component);
 
